@@ -111,26 +111,6 @@ AND order_date < join_date
 GROUP BY s.customer_id;
 
 
-
-/* SELECT customer_id, order_date
-FROM (
-SELECT *,
-	    ROW_NUMBER() OVER(PARTITION BY customer_id ORDER BY order_date DESC) AS rn
-FROM sales AS s
-INNER JOIN members m
-USING (customer_id)) AS t
-WHERE rn = 1; */
-
-/*SELECT customer_id, product_name 
-FROM (
-SELECT *,
-	    ROW_NUMBER() OVER(PARTITION BY customer_id ORDER BY order_date DESC) AS rn
-FROM sales AS s
-INNER JOIN menu m
-USING (product_id)) AS t
-WHERE rn = 1; */
-
-
 -- 9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
 SELECT customer_id, SUM(
        CASE WHEN product_name = "Sushi" THEN price*20 
