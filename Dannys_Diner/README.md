@@ -88,7 +88,6 @@ The analysis was performed step-by-step:
 📌 Loyalty points strongly correlate with **high-value items**  
 📌 Purchases before joining membership reveal interesting behavioral patterns  
 
-*(You can update this section based on your actual outputs.)*
 
 ---
 
